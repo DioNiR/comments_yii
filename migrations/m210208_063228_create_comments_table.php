@@ -19,7 +19,7 @@ class m210208_063228_create_comments_table extends Migration
             'comment_text' => $this->text()->notNull(),
             'authorId' => $this->char(100),
             'author_name' => $this->char(10),
-            'hide' => $this->tinyInteger(1),
+            'hide' => $this->tinyInteger(1)->defaultValue(0),
         ]);
     }
 
